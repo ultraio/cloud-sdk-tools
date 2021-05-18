@@ -11,4 +11,6 @@ RUN apk add --no-cache --virtual \
     make \
     openssl-dev \
     sed \
-    && gcloud components install kubectl
+    && gcloud components install kubectl \
+    && cd /usr/local/bin \
+    && wget "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" -O - | bash
