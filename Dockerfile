@@ -1,4 +1,4 @@
-FROM google/cloud-sdk:331.0.0-alpine
+FROM google/cloud-sdk:412.0.0-alpine
 
 RUN apk add --no-cache --virtual \
     .build-deps \
@@ -11,6 +11,6 @@ RUN apk add --no-cache --virtual \
     make \
     openssl-dev \
     sed \
-    && gcloud components install kubectl \
+    && gcloud components install kubectl gke-gcloud-auth-plugin \
     && cd /usr/local/bin \
     && wget "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh" -O - | bash
