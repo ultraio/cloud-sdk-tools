@@ -1,4 +1,4 @@
-FROM google/cloud-sdk:412.0.0-alpine
+FROM google/cloud-sdk:485.0.0-alpine
 
 RUN apk add --no-cache --virtual \
     .build-deps \
